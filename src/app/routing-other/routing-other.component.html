@@ -1,0 +1,5 @@
+<p>routing-other works!</p>
+<div *ngFor="let item of routerNested; let id = index">
+  <h4>{{ item.title }}</h4>
+  <button [routerLink]="['/route-single', id]">goto content</button>
+</div>

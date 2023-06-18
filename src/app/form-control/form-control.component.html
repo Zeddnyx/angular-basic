@@ -1,0 +1,53 @@
+<p>form-control works!</p>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <input
+      type="text"
+      name="username"
+      placeholder="username"
+      formControlName="username"
+    />
+  </div>
+  <div>
+    <input
+      type="email"
+      name="email"
+      placeholder="email"
+      formControlName="email"
+    />
+  </div>
+  <div>
+
+    <input
+      type="text"
+      name="street"
+      placeholder="street"
+      formControlName="street"
+    />
+
+    <input
+      type="text"
+      name="city"
+      placeholder="city"
+      formControlName="city"
+    />
+  </div>
+  <div>
+    <!-- get value of array -->
+    <input
+      type="text"
+      name="skills"
+      placeholder="skills"
+      #skill
+      (keyup.enter)="addSkill(skill)"
+    />
+    <ul>
+      <li *ngFor="let skill of Skills.controls; let i = index">
+        {{ skill.value }}
+        <a (click)="rmvSkill(i)">X</a>
+      </li>
+    </ul>
+  </div>
+  <button [disabled]="form.invalid">add</button>
+</form>

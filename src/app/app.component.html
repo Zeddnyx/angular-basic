@@ -1,0 +1,42 @@
+<h5>hola amigos</h5>
+<h1>{{ customePipeText | cPipe : 20 }}</h1>
+`
+<h1>{{ messageChild }}</h1>
+<h1>{{ messageOutput }}</h1>
+<img [src]="imgUrl" class="img-container" alt="angular" />
+<h2 [class.text-true]="bool">Data binding</h2>
+<h2 [style.color]="bool ? 'green' : 'red'">Style binding</h2>
+`
+<app-rooms [fromParent]="parentMsg"></app-rooms>
+<app-child-comp (msgEvent)="receiveMsg($event)"></app-child-comp>
+<app-event-handle></app-event-handle>
+<br />
+<br />
+<br />
+<app-post-form></app-post-form>
+<br />
+<br />
+<br />
+<app-directive></app-directive>
+<br />
+<br />
+<br />
+<app-form-table></app-form-table>
+<br />
+<br />
+<br />
+<div [style.display]="'flex'">
+  <app-post-ser-public></app-post-ser-public>
+  <app-post-ser-private></app-post-ser-private>
+</div>
+<br />
+<br />
+<br />
+<app-form-control></app-form-control>
+<br />
+<br />
+<br />
+<button routerLink="/" routerLinkActive="active">Home</button>
+<button routerLink="/route" routerLinkActive="active">route 1</button>
+<button routerLink="/route-other/" routerLinkActive="active">route 2</button>
+<router-outlet></router-outlet>

@@ -1,0 +1,32 @@
+<p>directive works!</p>
+<ul>
+  <li [style.dispay]="'flex'" *ngFor="let item of listArray; let id = index">
+    <p>{{ item }}</p>
+    <button (click)="rmvArray(id)">delete</button>
+  </li>
+</ul>
+<button (click)="addArray()">Add Array</button>
+<br />
+<br />
+<p>maping obj of array</p>
+<br />
+<ul>
+  <li *ngFor="let item of objArray; let id = index">{{ item.name }}</li>
+</ul>
+
+
+<p>Fetch logic</p>
+
+<button (click)="addResult()">add result</button>
+<div *ngIf="resultarray.length > 0; else noData">
+  <ul>
+    <li *ngFor="let item of resultarray; let id = index">
+      <p>{{ item }}</p>
+      <button (click)="rmvResult(id)">Del</button>
+    </li>
+  </ul>
+</div>
+
+<ng-template #noData>
+  <p>no data</p>
+</ng-template>

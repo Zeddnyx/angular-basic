@@ -1,0 +1,13 @@
+<p>rooms works!</p>
+
+<h2>{{ myComponents }}</h2>
+<div [hidden]="hideRooms">
+  <span>numb of room: </span>
+  <span [innerText]="numberOfRooms"></span>
+</div>
+
+<button (click)="toggle()">Toggle</button>
+
+<h2>{{fromParent}}</h2>
+
+<app-other-comp [fromOtherComp]="otherCompMsg"></app-other-comp>

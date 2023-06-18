@@ -1,0 +1,17 @@
+<p>event-handle works!</p>
+<!-- keyup.enter will only render everytime user click enter-->
+<input type="text" (keyup.enter)="onKeyUp($event)" />
+<br/>
+<br/>
+<input type="text" (keyup.enter)="onKeyUpUser(user.value)" #user />
+<br/>
+<br/>
+<!-- Two way data binding -->
+<!-- <input type="text" (keyup.enter)="onKeyUp($event)" /> -->
+<input type="text" [(ngModel)]="userName" (keyup.enter)="onKeyUpUserName()" />
+<h3>{{userName}}</h3>
+<p>
+data binding way 2 with initial value
+</p>
+
+<input type="text" [(ngModel)]="inital" (keyup.enter)="initalVal()"> <!-- import FormEvent in app.module -->

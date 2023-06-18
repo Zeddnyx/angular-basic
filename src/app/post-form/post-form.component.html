@@ -1,0 +1,23 @@
+<p>post-form works!</p>
+<div [style.display]="'flex'">
+  <div class="form">
+    <input type="text" [(ngModel)]="inputUser" />
+    <textarea [(ngModel)]="inpurArea"></textarea>
+    <input type="text" [(ngModel)]="addImg" />
+    <input type="text" [(ngModel)]="addLink" />
+    <input type="checkbox" [(ngModel)]="addBg" />
+  </div>
+
+  <div>
+    <p [class.addBg]="addBg ? 'addBg' : ''">Username:{{ inputUser }}</p>
+    <p>coment: {{ inpurArea }}</p>
+    <img [src]="addImg" [style.dispay]="addImg ? 'block' : 'none'" alt="img" />
+    <a
+      [href]="addLink"
+      target="_blank"
+      [style.display]="addLink ? 'block' : 'none'"
+    >
+      goto Link</a
+    >
+  </div>
+</div>

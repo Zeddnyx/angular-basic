@@ -1,0 +1,13 @@
+.img-container {
+  width: 20%;
+  height: 20%;
+}
+
+.text-true {
+  color: green;
+  font-weight: bold;
+}
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
